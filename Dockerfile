@@ -1,4 +1,4 @@
-FROM jupyterhub/jupyterhub
+FROM jupyterhub/jupyterhub:4.0.0b2
 LABEL maintainer="Yoshihiko Kunisato <kunisato@psy.senshu-u.ac.jp>"
 
 RUN apt -y update && apt -y upgrade
