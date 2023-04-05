@@ -29,7 +29,10 @@ RUN pip3 install notebook \
     pyddm \
     inferactively-pymdp\
     bokeh \
-    sudachipy
+    sudachipy \
+    torch \
+    torchvision \
+    torchaudio
 
 # Install Julia
 ARG JULIA_VERSION="1.8.5"
