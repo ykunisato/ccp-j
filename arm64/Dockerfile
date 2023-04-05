@@ -3,7 +3,9 @@ LABEL maintainer="Yoshihiko Kunisato <kunisato@psy.senshu-u.ac.jp>"
 
 RUN apt -y update && apt -y upgrade
 RUN apt install -y wget \
-    git
+    git \
+    crossbuild-essential-arm64\
+    python3-dev
 
 # Intall Python packages
 RUN pip3 install notebook \
@@ -29,7 +31,7 @@ RUN pip3 install notebook \
     pyddm \
     inferactively-pymdp\
     bokeh \
-    sudachipy \
+    #sudachipy \
     torch \
     torchvision \
     torchaudio
@@ -37,8 +39,8 @@ RUN pip3 install notebook \
 # Install Julia
 ARG JULIA_VERSION="1.8.5"
 RUN JULIA_MAJOR=`echo $JULIA_VERSION | sed -E  "s/\.[0-9]+$//g"` && \
-    wget https://julialang-s3.julialang.org/bin/linux/x64/$JULIA_MAJOR/julia-$JULIA_VERSION-linux-x86_64.tar.gz && \
-    tar -xvzf julia-$JULIA_VERSION-linux-x86_64.tar.gz && \
+    wget https://julialang-s3.julialang.org/bin/linux/aarch64/$JULIA_MAJOR/julia-$JULIA_VERSION-linux-aarch64.tar.gz && \
+    tar -xvzf julia-$JULIA_VERSION-linux-aarch64.tar.gz && \
     cp -r julia-$JULIA_VERSION /opt/ && \
     ln -s /opt/julia-$JULIA_VERSION/bin/julia /usr/local/bin/julia && \
-    rm -r julia-$JULIA_VERSION-linux-x86_64.tar.gz
+    rm -r julia-$JULIA_VERSION-linux-aarch64.tar.gz
