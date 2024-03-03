@@ -34,10 +34,10 @@ su XXX
 julia
 ```
 
-Copy and paste the following code to install Julia packages.
+Copy and paste the following code to install IJulia and PyCall.
 
 ```
-ENV["PYTHON"] = "";using Pkg;Pkg.update();Pkg.add(["IJulia","PyCall"]);Pkg.build(["IJulia","PyCall"]);Pkg.add(["HierarchicalGaussianFiltering","ActionModels","DataFrames","CSV","PyPlot","Statistics","Gadfly","GLM","Optim","Plots","ArviZ","StatsPlots","DiffEqBayes","ForwardDiff","Roots","SymPy","ForneyLab","Suppressor", "LogExpFunctions", "Colors", "StatsModelComparisons","RxInfer","BenchmarkTools"]);Pkg.precompile()
+ENV["PYTHON"] = "";using Pkg;Pkg.update();Pkg.add(["IJulia","PyCall"]);Pkg.build(["IJulia","PyCall"]);
 ```
 
 6.pen the web browser and type "http://localhost:8000/" in the URL bar. 
