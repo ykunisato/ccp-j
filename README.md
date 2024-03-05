@@ -13,7 +13,7 @@ This is a repository of Dockerfile for JupyterHub used in [Computational Clinica
 3.Type the following code to pull a Docker container. 
 
 ```
-docker run -d -p 8000:8000 --name jupyterhub ghcr.io/ykunisato/ccp-j:latest jupyterhub
+docker run -d -p 8000:8000 --name jupyterhub ykunisato/ccp-j:latest jupyterhub
 ```
 
 4.Add user to jupyterHub
