@@ -1,6 +1,6 @@
 # Dockerfile for JupyterHub in Computational Clinical Psychology Lab
 
-This is a repository of Dockerfile for JupyterHub used in [Computational Clinical Psychology Lab](https://kunisatolab.github.io/english/index.html). This Dockerfile contains
+This is a repository of Dockerfile for JupyterHub used in [Computational Clinical Psychology Lab](https://kunisatolab.github.io/english/index.html). The GitHub repository for this Docker image is: [ykunisato/ccp-j](https://github.com/ykunisato/ccp-j). This Dockerfile contains
 
 - Julia
 - Python 3 & Python packages(inferactively-pymdp,bokeh,scipy,seaborn,scikit-learn,sympy,mne,mecab-python3,pymc3,psychrnn,pyddm...)
