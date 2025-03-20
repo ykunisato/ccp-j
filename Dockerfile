@@ -1,4 +1,4 @@
-FROM jupyterhub/jupyterhub:latest
+FROM quay.io/jupyterhub/jupyterhub:latest
 LABEL maintainer="Yoshihiko Kunisato <kunisato@psy.senshu-u.ac.jp>"
 
 RUN apt -y update && apt -y upgrade
@@ -27,16 +27,16 @@ RUN pip3 install notebook \
     unidic-lite \
     pymc3 \
     simpy \
-    psychrnn \
+    #psychrnn \
     pyddm \
     inferactively-pymdp\
-    pyhgf \
+    #pyhgf \
     bokeh \
     torch \
     torchvision
 
 # Install Julia
-ARG JULIA_VERSION="1.10.1"
+ARG JULIA_VERSION="1.11.4"
 RUN JULIA_MAJOR=`echo $JULIA_VERSION | sed -E  "s/\.[0-9]+$//g"` && \
     # ARM
     wget https://julialang-s3.julialang.org/bin/linux/aarch64/$JULIA_MAJOR/julia-$JULIA_VERSION-linux-aarch64.tar.gz && \
